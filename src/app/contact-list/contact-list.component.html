@@ -1,0 +1,10 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let contact of contacts">
+    <mat-expansion-panel-header>
+      First_Name : {{ contact.first_name }}
+    </mat-expansion-panel-header>
+    <p>Last_name : {{ contact.last_name }}</p><br>
+    <p>Phone : {{ contact.phone }}</p>
+    <button mat-raised-button color="warn" (click)= "deleteContact(contact._id)">Delete</button>
+  </mat-expansion-panel>
+</mat-accordion>
